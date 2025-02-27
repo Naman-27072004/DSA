@@ -83,38 +83,38 @@ void reverse(string str)
     }
     cout << str << endl;
 }
-void palindrome(string str)
-{
-    int res;
-    res = length(str);
-    for (int i = 0; str[i] != '\0'; i++)
-    {
-        if (str[i] >= 65 && str[i] <= 90)
-        {
-            str[i] += 32;
-        }
-    }
-    int n;
-    for (int i = 0, j = res - 1; i <= j; i++, j--)
-    {
-        if (str[i] != str[j])
-        {
-            n = 0;
-        }
-        else
-        {
-            n = 1;
-        }
-    }
-    if (n == 1)
-    {
-        cout << "It is a palindrome" << endl;
-    }
-    else
-    {
-        cout << "It is not a palindrome" << endl;
-    }
-}
+// void palindrome(string str)
+// {
+//     int res;
+//     res = length(str);
+//     for (int i = 0; str[i] != '\0'; i++)
+//     {
+//         if (str[i] >= 65 && str[i] <= 90)
+//         {
+//             str[i] += 32;
+//         }
+//     }
+//     int n;
+//     for (int i = 0, j = res - 1; i <= j; i++, j--)
+//     {
+//         if (str[i] != str[j])
+//         {
+//             n = 0;
+//         }
+//         else
+//         {
+//             n = 1;
+//         }
+//     }
+//     if (n == 1)
+//     {
+//         cout << "It is a palindrome" << endl;
+//     }
+//     else
+//     {
+//         cout << "It is not a palindrome" << endl;
+//     }
+// }
 int main()
 {
     string str;
@@ -122,15 +122,15 @@ int main()
     getline(cin, str);
     // cout << str;
     int n = 0;
-    while (n != 7)
+    while (n != 6)
     {
         cout << "1. Find the length of the string." << endl
              << "2. Changing case of each word." << endl
              << "3. Count the number of words, consonents and vowels." << endl
              << "4. Validate a string." << endl
              << "5. Reverse a string." << endl
-             << "6. Check if a string is a palindrome." << endl
-             << "7. Exit the menu." << endl;
+            //  << "6. Check if a string is a palindrome." << endl
+             << "6. Exit the menu." << endl;
         cout << "which operation do you want to perform :- ";
         cin >> n;
         switch (n)
@@ -152,9 +152,9 @@ int main()
         case 5:
             reverse(str);
             break;
-        case 6:
-            palindrome(str);
-            break;
+        // case 6:
+        //     palindrome(str);
+        //     break;
         default:
             cout << "Thanks for using this program";
             break;
